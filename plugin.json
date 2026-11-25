@@ -3,7 +3,7 @@
   "name": "perplexity",
   "displayName": "Perplexity API",
   "version": "1.0.0",
-  "description": "Search the live web and get cited answers, step-by-step reasoning, and deep research in Antigravity via Perplexity's hosted MCP server and skill.",
+  "description": "Search the live web, fetch content from known URLs, and get cited answers, step-by-step reasoning, and deep research in Antigravity via Perplexity's hosted MCP server and skill.",
   "logo": "assets/logo.png",
   "suggestedPrompts": [
     "Search for recent release notes and breaking changes for this project's main framework, with links to official docs",
@@ -22,6 +22,7 @@
     "perplexity",
     "search",
     "web-search",
+    "context",
     "research",
     "reasoning",
     "citations",
