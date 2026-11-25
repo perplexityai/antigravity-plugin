@@ -1,0 +1,30 @@
+{
+  "$schema": "https://antigravity.google/schemas/v1/plugin.json",
+  "name": "perplexity",
+  "displayName": "Perplexity API",
+  "version": "1.0.0",
+  "description": "Search the live web and get cited answers, step-by-step reasoning, and deep research in Antigravity via Perplexity's hosted MCP server and skill.",
+  "logo": "assets/logo.png",
+  "suggestedPrompts": [
+    "Search for recent release notes and breaking changes for this project's main framework, with links to official docs",
+    "Ask Perplexity to compare the tradeoffs between two libraries we are evaluating, with numbered citations",
+    "Run deep research on current best practices and benchmarks for this architecture decision, citing primary sources"
+  ],
+  "author": {
+    "name": "Perplexity AI",
+    "email": "api@perplexity.ai",
+    "url": "https://www.perplexity.ai"
+  },
+  "homepage": "https://docs.perplexity.ai/docs/getting-started/integrations/antigravity",
+  "repository": "https://github.com/perplexityai/antigravity-plugin",
+  "license": "MIT",
+  "keywords": [
+    "perplexity",
+    "search",
+    "web-search",
+    "research",
+    "reasoning",
+    "citations",
+    "mcp"
+  ]
+}

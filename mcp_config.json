@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "perplexity": {
+      "serverUrl": "https://api.perplexity.ai/mcp",
+      "timeoutSeconds": 300,
+      "tools": {
+        "perplexity_search": {
+          "eager": true
+        },
+        "perplexity_ask": {
+          "eager": true
+        }
+      }
+    }
+  }
+}
