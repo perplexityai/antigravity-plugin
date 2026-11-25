@@ -21,6 +21,7 @@ Choose the single fastest tool that fits the question. Do not chain `perplexity_
 | Need | Tool | Latency & Behavior |
 |---|---|---|
 | Live lookup, current facts (weather, scores, prices, releases), exact URLs, official docs, or error snippets | `perplexity_search` | Fastest; returns ranked web snippets you synthesize directly. Default choice for simple lookups. |
+| Fetch content, Markdown, highlights, or metadata from known URLs | `perplexity_context` | Fast; reads the exact URLs you pass via the Context API without running a web search. |
 | Single pre-synthesized answer with numbered citations across multiple pages | `perplexity_ask` | Fast to moderate; use instead of `perplexity_search`, not after it. |
 | Multi-step analysis, architecture tradeoffs, or technical comparisons | `perplexity_reason` | Moderate; step-by-step web-grounded reasoning with citations. |
 | Comprehensive multi-source report on a broad topic | `perplexity_research` | Slow (can take several minutes); use only when the user asks for deep research. |
@@ -34,5 +35,6 @@ Choose the single fastest tool that fits the question. Do not chain `perplexity_
    - `search_domain_filter`: allowlist domains (for example `["docs.python.org", "github.com"]`) or exclude domains with a `-` prefix (for example `["-reddit.com"]`). If a strict domain filter returns too few results, retry without it.
    - `country`: ISO 3166-1 alpha-2 code (for example `"US"`, `"GB"`) for regional results.
    - `max_results`: up to `20` (default `10`); `max_tokens_per_page`: `256` to `2048` (default `1024`).
-4. On `perplexity_ask`, `perplexity_reason`, and `perplexity_research`, pass `messages` as a conversation array (`[{"role": "user", "content": "..."}]`). Include `search_recency_filter` or `search_domain_filter` when freshness or source authority matters.
-5. Preserve source URLs and publication dates in your final answer so the user can verify claims directly.
+4. When you already have specific URLs to read (such as official docs or release notes), call `perplexity_context` with `urls` (and optional `formats`, `highlights`, `criteria`, or freshness options) instead of searching again.
+5. On `perplexity_ask`, `perplexity_reason`, and `perplexity_research`, pass `messages` as a conversation array (`[{"role": "user", "content": "..."}]`). Include `search_recency_filter` or `search_domain_filter` when freshness or source authority matters.
+6. Preserve source URLs and publication dates in your final answer so the user can verify claims directly.

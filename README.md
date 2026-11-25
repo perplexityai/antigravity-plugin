@@ -1,15 +1,16 @@
 # Perplexity API Plugin for Google Antigravity
 
-Connect Google Antigravity to Perplexity's hosted MCP server (`https://api.perplexity.ai/mcp`) for real-time web search, cited answers, step-by-step reasoning, and deep research.
+Connect Google Antigravity to Perplexity's hosted MCP server (`https://api.perplexity.ai/mcp`) for real-time web search, URL content extraction, cited answers, step-by-step reasoning, and deep research.
 
 ## What's Included
 
-- **Hosted MCP server (`perplexity`)** with four read-only tools backed by the Perplexity Search API and Agent API:
+- **Hosted MCP server (`perplexity`)** with five read-only tools backed by the Perplexity Search API, Context API, and Agent API:
   - `perplexity_search`: Ranked web search results with titles, URLs, snippets, and dates, plus recency, domain, country, and low-latency (`search_type: "fast"`) controls.
+  - `perplexity_context`: Fetch content from known URLs as Markdown, HTML, links, query-relevant highlights, metadata, and yes/no criteria scores.
   - `perplexity_ask`: Quick web-grounded answers with numbered citations.
   - `perplexity_reason`: Step-by-step analysis and tradeoff comparisons grounded in web sources.
   - `perplexity_research`: Deep multi-source research reports with numbered citations (may take several minutes).
-- **Skill (`/perplexity-search`)**: Guides tool selection across search, ask, reason, and research, plus recency and domain filters.
+- **Skill (`/perplexity-search`)**: Guides tool selection across search, context extraction, ask, reason, and research, plus recency and domain filters.
 - **Rule (`rules/AGENTS.md`)**: Always-on guidance for reaching for Perplexity tools when tasks need live web info or citations.
 
 ## Setup
